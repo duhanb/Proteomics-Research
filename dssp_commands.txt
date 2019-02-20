@@ -1,0 +1,9 @@
+
+# used to create .dssp files from a folder (Proteins) of pdb (ent) files
+~/Desktop/spring2019/Proteins$ for file in Proteins/*.ent; do dssp -i $file -o ${file}.dssp; done
+
+# used to move the .dssp files to a seperate folder (dssp_files)
+~/Desktop/spring2019/Proteins$ mv *dssp* ~/Desktop/spring2019/dssp_files/
+
+# used to rename the files from pdb####.ent.dssp to pdb####.dssp where #### is the protein name
+~/Desktop/spring2019/dssp_files$ rename 's/.ent././g' *
