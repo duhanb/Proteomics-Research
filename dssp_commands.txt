@@ -1,5 +1,6 @@
 
 # used to create .dssp files from a folder (Proteins) of pdb (ent) files
+# Use directory of dssp file dropoff for line 4 and adjust to new folder for 7, and 10
 ~/Desktop/spring2019/Proteins$ for file in Proteins/*.ent; do dssp -i $file -o ${file}.dssp; done
 
 # used to move the .dssp files to a seperate folder (dssp_files)
